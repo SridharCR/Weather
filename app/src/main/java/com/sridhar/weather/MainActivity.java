@@ -51,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPreExecute();
 
             /* Showing the ProgressBar, Making the main design GONE */
-            findViewById(R.id.loader).setVisibility(View.VISIBLE);
             findViewById(R.id.mainContainer).setVisibility(View.GONE);
-            findViewById(R.id.errorText).setVisibility(View.GONE);
         }
 
         protected String doInBackground(String... args) {
@@ -114,13 +112,11 @@ public class MainActivity extends AppCompatActivity {
                 humidityTxt.setText(humidity);
 
                 /* Views populated, Hiding the loader, Showing the main design */
-                findViewById(R.id.loader).setVisibility(View.GONE);
                 findViewById(R.id.mainContainer).setVisibility(View.VISIBLE);
 
 
             } catch (JSONException e) {
-                findViewById(R.id.loader).setVisibility(View.GONE);
-                findViewById(R.id.errorText).setVisibility(View.VISIBLE);
+
             }
 
         }

@@ -110,7 +110,7 @@
                         android:padding="8dp">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:background="#3CF1EBF1"
@@ -156,7 +156,7 @@
                         android:padding="8dp">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:background="#3CF1EBF1"
@@ -202,7 +202,7 @@
                         android:padding="8dp">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:background="#3CF1EBF1"
@@ -248,7 +248,7 @@
                         android:padding="8dp">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:background="#3CF1EBF1"
@@ -296,7 +296,7 @@
                         android:padding="8dp">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="100dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
                             android:background="#3CF1EBF1"
