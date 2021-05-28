@@ -59,16 +59,6 @@ public class MainActivity extends AppCompatActivity {
             return response;
         }
 
-        protected void set_dynamic_background(String climate) {
-            RelativeLayout bg_holder = (RelativeLayout) findViewById(R.id.parent);
-            int resource = R.drawable.background_sunny;
-            if (climate.contains("rain"))
-                resource = R.drawable.background_rainy;
-            if (climate.contains("cloud"))
-                resource = R.drawable.background_cloudy;
-            bg_holder.setBackgroundResource(resource);
-
-        }
 
         @Override
         protected void onPostExecute(String result) {
@@ -96,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
                 String weatherDescription = weather.getString("description");
 
                 String address = jsonObj.getString("name") + ", " + sys.getString("country");
-                this.set_dynamic_background(weatherMain);
 
                 /* Populating extracted data into our views */
                 addressTxt.setText(address);
