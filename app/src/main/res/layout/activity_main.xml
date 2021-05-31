@@ -24,7 +24,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="chennai,in"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/updated_at"
@@ -62,7 +63,8 @@
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-thin"
                     android:text="29°C"
-                    android:textSize="90dp" />
+                    android:textSize="90dp"
+                    android:textStyle="bold"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"

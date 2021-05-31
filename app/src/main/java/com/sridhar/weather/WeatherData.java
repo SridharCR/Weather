@@ -5,24 +5,28 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import android.util.Log;
 
-public class HttpRequest {
-    public static String excuteGet(String targetURL) {
+public class WeatherData {
+    public static String getData(String targetURL) {
         URL url;
         HttpURLConnection connection = null;
         try {
+            Log.d("14", "14 Entering");
             url = new URL(targetURL);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
+            Log.d("19", "status");
 
-            InputStream is;
+            InputStream inputStream;
             int status = connection.getResponseCode();
+            Log.d("22", "sdew");
             if (status != HttpURLConnection.HTTP_OK)
-                is = connection.getErrorStream();
+                inputStream = connection.getErrorStream();
             else
-                is = connection.getInputStream();
+                inputStream = connection.getInputStream();
 
-            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+            BufferedReader rd = new BufferedReader(new InputStreamReader(inputStream));
             String line;
             StringBuffer response = new StringBuffer();
             while ((line = rd.readLine()) != null) {
