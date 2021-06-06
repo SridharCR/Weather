@@ -61,7 +61,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="sans-serif-thin"
                     android:text="29°C"
                     android:textSize="90dp"
                     android:textStyle="bold"/>
