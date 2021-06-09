@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
             sunsetTxt, windTxt, pressureTxt, humidityTxt;
     ProgressBar progressBar;
 
+    /**
+     * Overriding the onCreate()
+     * @param savedInstanceState - Application Instance
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +57,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    class GetWeatherData extends AsyncTask<String, Void, String> {
+    protected class GetWeatherData extends AsyncTask<String, Void, String> {
+        /**
+         * Overriding the onPreExecute()
+         */
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             progressBar.setVisibility(View.VISIBLE);
         }
 
+        /**
+         * Returns the JSON response received from the Open Weather API.
+         *
+         * @param data Supposed to contain the city/geolocation information, not used for now
+         * @return String containing the JSON response from open weather api
+         */
         protected String doInBackground(String... data) {
             String response = "";
             String url = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY + "&units=metric&appid=" + API;
@@ -67,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
             return response;
         }
 
+        /**
+         * Overriding the onPostExecute()
+         * @param result String containing the JSON response from open weather api
+         */
         @Override
         protected void onPostExecute(String result) {
             progressBar.setVisibility(View.GONE);
@@ -79,6 +96,11 @@ public class MainActivity extends AppCompatActivity {
 //        return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
 //    }
 
+        /**
+         * Handles the UI by showing the alert prompts
+         * Invoke this method when in terms of error handling
+         * @param error String title for the alert prompt
+         */
         protected void errorHandling(String error) {
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
             alertDialogBuilder.setCancelable(true);
@@ -97,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
             alertDialogBuilder.show();
         }
 
+        /**
+         * Displays the JSON response in correspondence to the UI
+         * In case of exception, errorHandling() is called
+         * @param result String response contains the weather data
+         */
         protected void resultDisplay(String result) {
             try {
                 if (result == "")
