@@ -14,9 +14,7 @@ If there is no internet available, then it will display an alert dialog box stat
 
 Here is a sample video of the application. 
 
-
-<p align="center">
 https://user-images.githubusercontent.com/22750196/122676608-64eab800-d1fc-11eb-8e8a-698b26250c5b.mp4  
-</p>
+
 
 This application will get more features in the future.
